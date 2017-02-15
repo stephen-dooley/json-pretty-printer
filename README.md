@@ -4,3 +4,5 @@
 ```
 Rob me code and open index.html in a browser
 ```
+
+Contributors: Stephen Dooley and Colm Seale
