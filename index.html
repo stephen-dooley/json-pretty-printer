@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>JSON Pretty Printer</title>
+
+		<meta name="description" content="JSON Pretty Printer" />
+		<meta name="keywords"    content="json, pretty" />
+
+		<META NAME="expires" CONTENT="never" />
+		<META NAME="language" CONTENT="english" />
+		<META NAME="distribution" CONTENT="Global" />
+		<META NAME="robots" CONTENT="ALL,INDEX,FOLLOW" />
+
+		<meta name="document-class" content="Completed">
+		<meta name="document-classification" content="JSON Pretty Printer">
+
+		<META NAME="author" CONTENT="Stephen Dooley" />
+		<META NAME="copyright" CONTENT="stephendooley.com" />
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		<meta name="abstract" content="JSON Pretty Print" />
+
+		<link rel="stylesheet" type="text/css" href="json-pretty-printer.css" />
+	</head>
+
+	<body>
+		<div class="header">
+      <h5>JSON pretty printer</h5>
+		<div>
+
+    <div class="pretty-container">
+      <div class="ugly-box">
+        <div class="form">
+          <form onsubmit="return makePretty();" name="json_form">
+            <p>
+              Ugly JSON goes here:
+            </p>
+
+            <textarea name="json_data_in" id="json_data_in"></textarea>
+            <input type="submit" value="Pretty Print" />
+          </form>
+        </div>
+      </div>
+
+      <div class="pretty-box">
+        <div>
+          <p>
+            Pretty JSON prints here:
+          </p>
+          <textarea name="json_data_out" id="json_data_out"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function makePretty(json) {
+        try {
+          var stringJson = document.forms['json_form']['json_data_in'].value;
+          var jsonObject = JSON.parse(stringJson);
+
+          var prettyJsonObject = JSON.stringify(jsonObject, undefined, 4);
+          document.getElementById('json_data_out').value = prettyJsonObject;
+          return false;
+        } catch(e) {
+          alert('You\'re useless!' + '\n\nERROR:\n' + e);
+          return false;
+        }
+      }
+    </script>
+
+	</body>
+</html>

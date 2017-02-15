@@ -1,0 +1,41 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #303030;
+}
+
+html,body,td {
+  font-family: arial,sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+h5 {
+  padding-top: 20px;
+  text-align: center;
+  color: #606060;
+}
+
+textarea#json_data_in,
+textarea#json_data_out {
+  width: 500px;
+  height: 400px;
+  text-align: left;
+}
+
+.pretty-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.pretty-container .ugly-box,
+.pretty-container .pretty-box {
+width: 48%;
+margin: 0 1%;
+float: left;
+}
